@@ -109,11 +109,18 @@ ul{
 
 .a-logo{
     display: initial;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 32px;
+    color: #FFFFFF;
 }
 
-.logo{
-    object-fit: contain;    
+.a-logo span{    
+    color: #18BAFF;
 }
+
+
 
 .color_white{
     color: #FFFFFF;
@@ -357,6 +364,7 @@ ul{
     display: flex;
     cursor: pointer;
     margin-top: 18px;    
+    align-items: center;
 }
 
 .ui-accordion-header > .accordion_icon{

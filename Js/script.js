@@ -1,11 +1,3 @@
-$( "#accordion" ).accordion({
-    collapsible: true
-});
-
-$( "#tabs" ).tabs({
-    active: 2
-});
-
 $(document).ready(function($) {
 	$('.btn_payment').click(function() {
 		$('.modal').fadeIn();
@@ -36,4 +28,13 @@ $(document).ready(function($) {
 		$('.overlay').fadeOut();
 		return false;
 	});	
+
+    $( "#accordion" ).accordion({
+        collapsible: true,       
+        heightStyle: "content"        
+    });
+    
+    $( "#tabs" ).tabs({
+        active: 2
+    });
 });
