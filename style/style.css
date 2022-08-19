@@ -11,8 +11,11 @@ body{
     font-family: 'TT Interfaces';
     height: 100vh;
     margin: 0;
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;    
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;    
     font-weight: 400;
     overflow-y: scroll;
 }
@@ -48,11 +51,13 @@ body{
 }
 
 .flex{
+    display: -webkit-box;
     display: flex;
 }
 
 main{
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
 }
 
 header, footer{
@@ -148,9 +153,12 @@ ul{
 }
 
 .btn{
+    display: -webkit-box;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
     padding: 13px 20px;
     text-align: center;
     
@@ -219,7 +227,8 @@ ul{
 
 .header_box{
     -moz-column-gap: 20px;
-         column-gap: 20px;
+         -webkit-column-gap: 20px;
+            column-gap: 20px;
     padding: 46px var(--width-limit);
     box-sizing: content-box;
 }
@@ -229,10 +238,13 @@ ul{
 }
 
 .redrock{
+    display: -webkit-box;
     display: flex;
     -moz-column-gap: 32px;
-         column-gap: 32px;
-    align-items: center;
+         -webkit-column-gap: 32px;
+            column-gap: 32px;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 .redrock .text_box>p{
@@ -251,7 +263,8 @@ ul{
 
 .redrock .flex{
     -moz-column-gap: 47px;
-         column-gap: 47px;
+         -webkit-column-gap: 47px;
+            column-gap: 47px;
 }
 
 .redrock .h1{
@@ -263,11 +276,13 @@ ul{
 }
 
 .advantages{
+    display: -webkit-inline-box;
     display: inline-flex;     
     flex-wrap: wrap; 
     gap: 26px;
     padding: 59px 0 88px 0;
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
 }
 
 .advantages>h2{
@@ -280,6 +295,7 @@ ul{
     flex-basis: 388px;
     padding: 54px 60px 60px 34px;
     position: relative;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(27.07%, #1E2242), to(rgba(30, 34, 66, 0)));
     background: linear-gradient(180deg, #1E2242 27.07%, rgba(30, 34, 66, 0) 100%);
     
 }
@@ -295,10 +311,13 @@ ul{
 }
 
 .box_img_text{
+    display: -webkit-box;
     display: flex;
     gap: 30px;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
     padding: 48px 0;
 }
 
@@ -330,18 +349,22 @@ ul{
 }
 
 .bg-gradient-iOS{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #0E112D), to(rgba(14, 17, 45, 0)));
     background: linear-gradient(180deg, #0E112D 50%, rgba(14, 17, 45, 0) 100%);
 }
 
 .platforms{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #0E112D), to(rgba(14, 17, 45, 0)));
     background: linear-gradient(180deg, #0E112D 50%, rgba(14, 17, 45, 0) 100%);    
 }
 
 .platforms .btn_box{
     gap: 24px;
     max-width: 509px;
+    display: -webkit-box;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 .platforms .btn_box .btn{
@@ -368,11 +391,14 @@ ul{
 .ui-accordion-header{
     padding: 31px 42px 31px 34px;
     border-radius: 5px  ;
+    background: -webkit-gradient(linear, left top, left bottom, from(#1E2242), to(#1E2242));
     background: linear-gradient(180deg, #1E2242 0%, #1E2242 100%);
+    display: -webkit-box;
     display: flex;
     cursor: pointer;
     margin-top: 18px;    
-    align-items: center;
+    -webkit-box-align: center;    
+            align-items: center;
 }
 
 .ui-accordion-header > .accordion_icon{
@@ -380,11 +406,14 @@ ul{
 }
 
 .ui-accordion-header > .accordion_icon line:nth-child(2){
+    -webkit-transition: all .5s linear;
     transition: all .5s linear;    
 }
 
 .ui-state-active .accordion_icon line:nth-child(2){
-    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+    -webkit-transition: all .5s linear;
     transition: all .5s linear;    
 }
 
@@ -393,6 +422,7 @@ ul{
 }
 
 .ui-accordion-content{
+    background: -webkit-gradient(linear, left top, left bottom, from(#1E2242), to(#1E2242));
     background: linear-gradient(180deg, #1E2242 0%, #1E2242 100%);
     padding: 0 34px 26px 34px;
     border-radius:  0 0 5px 5px ; 
@@ -413,34 +443,49 @@ ul{
 }
 
 .tabs{
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
-    align-items: center;    
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;    
 }
 
 .tabs .tab {
     gap: 14px;
+    display: -webkit-box;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
     flex-wrap: wrap;
 }
 
 .tabs .card{
     max-width: 326px;
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     text-align: center;    
-    justify-content: space-between;
+    -webkit-box-pack: justify;    
+            justify-content: space-between;
     position: relative;
 }
 
 .tabs .card .text_box{
     padding: 24px 24px 0 24px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#1E2242), to(rgba(30, 34, 66, 0)));
     background: linear-gradient(180deg, #1E2242 0%, rgba(30, 34, 66, 0) 100%);
     border-radius: 5px;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
 }
 
 .tabs .card .star{
@@ -467,9 +512,11 @@ ul{
     text-align: left;
     margin: 16px 0;
     margin-left: 20px;
+    display: -webkit-box;
     display: flex;
     -moz-column-gap: 18px;
-         column-gap: 18px;
+         -webkit-column-gap: 18px;
+            column-gap: 18px;
     margin: 40px 0;
 }
 
@@ -495,6 +542,7 @@ ul{
     border: 1px solid #564FFF;
     border-radius: 5px;
     text-align: center;
+    -webkit-transition: all .5s linear;
     transition: all .5s linear;
 }
 
@@ -503,7 +551,9 @@ ul{
 }
 
 .card>.img_box{
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    display: -webkit-box;
     display: flex;
     margin-bottom: 17px;
     margin-right: 17px;
@@ -530,14 +580,17 @@ footer .btn{
 }
 
 .payment{
+    display: -webkit-box;
     display: flex;
     gap: 33px;    
-    justify-content: center;
+    -webkit-box-pack: center;    
+            justify-content: center;
     padding: 37px 0 22px ;
 }
 
 .login{    
     padding: 36px 36px 46px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(27.07%, #1E2242), to(rgba(30, 34, 66, 0)));
     background: linear-gradient(180deg, #1E2242 27.07%, rgba(30, 34, 66, 0) 100%);
     -webkit-filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.11));
             filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.11));
@@ -554,10 +607,14 @@ footer .btn{
 }
 
 .login form{    
+    display: -webkit-box;    
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     gap: 27px;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
     width:100%;
 }
 
@@ -567,9 +624,13 @@ footer .btn{
 }
 
 .login .content_box{
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
     max-width: 500px;
     margin: 0 auto;
 }
@@ -605,8 +666,10 @@ input{
     }
 
     .mobile-img{
+        display: -webkit-box;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+                justify-content: center;
     }
 
     .box_img_text>.img_box {
@@ -615,11 +678,14 @@ input{
     }      
 
     .box_img_text{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
     }
 
     .box_img_text > .text{
-        order:-1;
+        -webkit-box-ordinal-group:0;
+                order:-1;
         text-align: center;
     }
 
@@ -628,13 +694,19 @@ input{
     }
 
     .box_img_text ul {
+        display: -webkit-box;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        -webkit-box-align: center;
+                align-items: center;
     }
 
     .box_img_text .text .btn_box {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
         max-width: 300px;
         margin: 0 auto;
     }
@@ -644,7 +716,8 @@ input{
     }
 
     .header_box{
-        justify-content: center;
+        -webkit-box-pack: center;
+                justify-content: center;
         padding: 20px var(--width-limit) 20px;
     }
 
@@ -653,7 +726,9 @@ input{
     }
 
     .redrock{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
         margin-top: 20px;
     }
 
@@ -663,11 +738,13 @@ input{
 
     .redrock .img{
         width: auto;
-        order: -1;
+        -webkit-box-ordinal-group: 0;
+                order: -1;
     }
 
     .redrock .flex{
-        justify-content: center;
+        -webkit-box-pack: center;
+                justify-content: center;
     }
 
     .redrock .text_box .h2{
@@ -691,7 +768,8 @@ input{
     .ui-tabs-nav {
         flex-wrap: wrap;
         gap: 18px;
-        justify-content: center;
+        -webkit-box-pack: center;
+                justify-content: center;
     }    
 
     .ui-tabs-nav {        
@@ -714,8 +792,10 @@ input{
     .platforms .btn_box {
         gap: 16px;
         max-width: 509px;
+        display: -webkit-box;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+                align-items: center;
     }
 }
 
