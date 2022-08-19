@@ -2,6 +2,11 @@
     --width-limit:48px;
 }
 
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+
+
 body{
     font-family: 'TT Interfaces';
     height: 100vh;
@@ -100,6 +105,10 @@ body{
 
 ul{
     margin-left: 18px;
+}
+
+.a-logo{
+    display: initial;
 }
 
 .logo{
@@ -556,6 +565,10 @@ input{
 }
 
 @media screen and (max-width:989px) {
+
+    .a-logo{
+        display: none;
+    }
     
     .d-initial{
         display: initial!important;
