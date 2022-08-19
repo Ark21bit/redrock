@@ -7,14 +7,15 @@
     <title>Главная</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/fonts.css">
+    <link rel="stylesheet" href="style/modal.css">
     <link rel="stylesheet" href="fonts/TTInterfaces/stylesheet.css">
 </head>
 <body>
     <header >
         <div class="container flex header_box" >
-            <a href="#"><img src="img/REDROCK.svg" alt="" class="logo"></a> 
+            <a href="index.html"><img src="img/REDROCK.svg" alt="" class="logo"></a> 
             <div class="btn btn_telegram p-relative">TELEGRAM <a href="#" class="a_fluid"></a></div> 
-            <div class="btn btn_secondary p-relative">Личный кабинет <a href="#" class="a_fluid"></a> </div> 
+            <div class="btn btn_secondary p-relative">Личный кабинет <a href="pages/login.html" class="a_fluid "></a> </div> 
         </div>
     </header>
     <main class="Prose">
@@ -63,7 +64,7 @@
                     <div class="img_box desctop-img"><img src="img/samsung.png" alt=""></div>
                     <div class="img_box mobile-img"><img src="img/Sumsung-1.png" alt=""></div>
                     <div class="text">
-                        <h3 class="h3">Android</h3>
+                        <h3 class="h3">Android <span><img src="img/android.svg" class="mobile-img d-initial" alt=""></span></h3>
                         <p class="body_font">Наш софт поддерживает все версии Android. После оплаты Вы получаете  файл для установки нашего чита, а также, видео-инструкцию. Удалять  старый PUBG MOBILE не требуется! Все работает на оригинальной версии. Вход в аккаунт работает со всех доступных сервисов. </p>
                         <p class="ul_name">Функционал:</p>
                         <ul class="body_font">
@@ -87,7 +88,7 @@
             <div class="container">
                 <div class="content box_img_text container">                
                     <div class="text">
-                        <h3 class="h3">iOS</h3>
+                        <h3 class="h3">iOS <span><img src="img/iOS.svg" class="mobile-img d-initial" alt=""></span></h3>
                         <p class="body_font">Наш софт поддерживает все версии iOS. После оплаты Вы получаете файл для установки нашего чита, а также, видео-инструкцию. Удалять старый PUBG MOBILE не требуется! Все работает на оригинальной версии Вход в аккаунт работает со всех доступных сервисов. </p>
                         <p class="ul_name">Функционал:</p>
                         <ul class="body_font">
@@ -270,6 +271,19 @@
         </div>
         © RedRock 2022. All rights reserved. Diagorou 4, Kermia Building, 6th floor, Nicosia, Cyprus. Reg.
     </footer>
+
+    <div class="modal">
+        <div class="content_box">
+            <h2 class="h2">Введите свой E-Mail</h2>
+            <form action="#">
+                <input type="mail" placeholder="Введите свою почту">
+                <button class="btn btn_submit">ПРОДОЛЖИТЬ</button>
+                <p class="body_font">Если после оплаты у Вас возникли вопросы, то обращайтесь в <a href="#" class="a">TELEGRAM</a></p>
+            </form>
+            <button class="close_modal"><img src="img/close_big.svg" alt=""></button>            
+        </div>
+    </div>
+    <div class="overlay"></div>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>  		
 	<script src="Js/script.js"></script>		

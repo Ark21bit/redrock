@@ -1,3 +1,7 @@
+:root{
+    --width-limit:48px;
+}
+
 body{
     font-family: 'TT Interfaces';
     height: 100vh;
@@ -17,7 +21,7 @@ body{
 
 .Prose {
     display: grid;
-    grid-template-columns: [full-start] minmax(48px, 1fr) [main-start] minmax(0, 1360px) [main-end] minmax(48px, 1fr) [full-end];
+    grid-template-columns: [full-start] minmax(var(--width-limit), 1fr) [main-start] minmax(0, 1360px) [main-end] minmax(var(--width-limit), 1fr) [full-end];
     grid-auto-rows: max-content;
 }
 
@@ -32,7 +36,7 @@ body{
 .container{
     max-width: 1360px;
     margin: 0 auto;
-    padding: 0 48px;
+    padding: 0 var(--width-limit);
 }
 
 .flex{
@@ -44,7 +48,7 @@ main{
 }
 
 header, footer{
-    width: 100%;    
+    width: 100%;        
 }
 
 *,
@@ -119,6 +123,9 @@ body{
 }
 
 .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 13px 20px;
     text-align: center;
     
@@ -161,6 +168,10 @@ body{
     width: 100%;
 }
 
+.d-initial{
+    display: initial;
+}
+
 .font-w-600{
     font-weight: 600;
 }
@@ -179,7 +190,7 @@ body{
 
 .header_box{
     column-gap: 20px;
-    padding: 46px 48px;
+    padding: 46px var(--width-limit);
     box-sizing: content-box;
 }
 
@@ -369,8 +380,8 @@ ul{
 footer{
     max-width: 342px;
     width: 100%;
-    padding: 40px 48px 54px;
-    box-sizing: content-box;
+    padding: 40px var(--width-limit) 54px;
+    box-sizing: border-box;
     margin: auto;
     text-align: center;
 
@@ -407,7 +418,7 @@ footer{
 
 
 .tabs .card{
-    width: 326px;
+    max-width: 326px;
     display: flex;
     flex-direction: column;
     text-align: center;    
@@ -499,7 +510,65 @@ footer{
     display: none;
 }
 
+footer .btn{
+    margin: auto;
+    width: 121px;
+}
+
+.login{    
+    padding: 36px 36px 46px;
+    background: linear-gradient(180deg, #1E2242 27.07%, rgba(30, 34, 66, 0) 100%);
+    filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.11));
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.login .login-h2{    
+    margin-bottom: 25px;
+}
+
+.login form{    
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    align-items: center;
+    width:100%;
+}
+
+.login form p{    
+    max-width: 300px;
+    text-align: center;
+}
+
+.login .content_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.btn_submit{
+    padding: 21px 56px;
+}
+
+input{
+    background: rgba(86, 79, 255, 0.15);
+    border: 1px solid #564FFF;
+    border-radius: 5px;
+    padding:21px 25px;
+    width: 100%;    
+}
+
+
+
 @media screen and (max-width:989px) {
+   
+
+    .box_img_text>.img_box {
+        width: auto;
+        max-width: 566px;
+    }
 
     .desctop-img{
         display: none;
@@ -527,6 +596,15 @@ footer{
         order: -1;
     }
 
+    .redrock .flex{
+        justify-content: center;
+    }
+
+    .redrock .text_box .h2{
+        font-size: 26px;
+        line-height: 33px;
+    }
+
     .logo{
         display: none;
     }
@@ -539,8 +617,97 @@ footer{
         flex-direction: column;
     }
 
-    .box_img_text > .img_box{
+    .box_img_text > .text{
         order:-1;
+        text-align: center;
+    }
+
+    .box_img_text > .text > h3+ *{        
+        text-align: left;
+    }
+
+    .box_img_text ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box_img_text .text .btn_box {
+        flex-direction: column;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .advantages .card {
+        flex-basis: 340px;
+        padding: 47px 38px 47px 30px;
+        
+    }
+
+    .d-initial{
+        display: initial!important;
+    }
+
+    .tabs .card{
+        max-width: 320px;
+    }
+
+    .ui-tabs-nav {
+        flex-wrap: wrap;
+        gap: 18px;
+        justify-content: center;
+    }
+
+    .platforms .h2 {
+        margin: 30px 0 25px 0;
+        text-align: center;
+    }
+
+    .advantages {
+        padding: 59px 0 15px 0;        
+    }
+
+    .box_img_text ul.body_font {
+        margin-bottom: 20px;
+    }
+
+    .platforms .btn_box {
+        gap: 16px;
+        max-width: 509px;
+        display: flex;
+        align-items: center;
+    }
+
+    .rates {
+        padding: 13px 0 60px;
+    }
+
+    .ui-tabs-nav {        
+        margin: 40px 0 23px 0;
+    }
+
+    .card_ul li {
+        line-height: 23px;
+    }
+
+    
+}
+
+@media screen and (max-width:400px) {
+    .Prose {       
+        grid-template-columns: [full-start] minmax(16px, 1fr) [main-start] minmax(0, 1360px) [main-end] minmax(16px, 1fr) [full-end];        
+    }
+
+    .tabs .card .star {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        right: -16px;
+        top: 17px;
+    }
+
+    :root{
+        --width-limit:16px;
     }
 }
 

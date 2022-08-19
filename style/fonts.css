@@ -6,6 +6,22 @@
     color: #FFFFFF;
 }
 
+input{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+::placeholder{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
 .h2{
     font-style: normal;
     font-weight: 800;
@@ -70,6 +86,15 @@
     color: #FFFFFF;    
 }
 
+.login-h2{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 33px;        
+    color: #FFFFFF;    
+    text-align: center;
+}
+
 @media screen and (max-width:989px) {
     .h1{        
         font-size: 34px;
@@ -80,6 +105,61 @@
     .h2{        
         font-size: 23px;
         line-height: 30px; 
+    }
+
+    .h5{        
+        font-size: 20px;
+        line-height: 26px;        
+    }
+
+    .h6 {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .body_font{       
+        font-size: 13px;
+        line-height: 16px;       
+    }
+
+    .body_font_small{       
+        font-size: 13px;
+        line-height: 18px;      
+    }
+
+    .ul_name{
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+    .box_img_text .text .body_font{
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .rates .h2 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .platforms .h2 {
+        font-size: 26px;
+        line-height: 33px;
+    }   
+
+    .card_ul{
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .FAQ> .h2 {
+        font-size: 26px;
+        line-height: 33px;
+    }
+
+    footer.body_font_small{
+        font-size: 14px;
+        line-height: 18px;
     }
 }
 
