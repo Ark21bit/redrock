@@ -7,6 +7,7 @@
     <title>Главная</title>
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../style/modal.css">
     <link rel="stylesheet" href="../fonts/TTInterfaces/stylesheet.css">
 </head>
 <body>
@@ -24,21 +25,37 @@
                 <form action="#">
                     <input type="text" placeholder="Введите логин">
                     <input type="text" placeholder="Введите ключ авторизации (доступен после покупки)">
-                    <button type="submit" class="btn btn_submit">ВОЙТИ</button>
-                    <p class="body_font">Если после оплаты у Вас возникли вопросы, то обращайтесь в <a href="#" class="a">TELEGRAM</a></p>                   
+                    <button type="submit" class="btn btn_submit btn">ВОЙТИ</button>
+                    <p class="body_font">Если после оплаты у Вас возникли вопросы, то обращайтесь в <a href="#" class="a link-anim">TELEGRAM</a></p>                   
                 </form>
             </div>            
         </div>
-        <h2 class="login-h2">У тебя все еще нет лицензии? <a href="#" class="font-gradient-blue">Приобрести</a> </h2>
+        <h2 class="login-h2">У тебя все еще нет лицензии? <span class="font-gradient-blue btn_open_modal">Приобрести</span> </h2>
     </main>
     <footer class="body_font_small">
         <a href="#" class="btn btn_telegram">TELEGRAM</a>
         <div class="payment">
-            <img src="../img/mastercard.png" alt="">            
-            <img src="../img/visa.png" alt="">
-            <img src="../img/pcidss.png" alt="">
+            <img src="img/mastercard.webp" alt="" width="76" height="27">            
+            <img src="img/visa.webp" alt="" width="58" height="27">
+            <img src="img/pcidss.webp" alt="" width="74" height="27">
         </div>
         © RedRock 2022. All rights reserved. Diagorou 4, Kermia Building, 6th floor, Nicosia, Cyprus. Reg.
     </footer>
+
+    <div class="modal">
+        <div class="content_box">
+            <h2 class="h2">Введите свой E-Mail</h2>
+            <form action="#">
+                <input type="email" placeholder="Введите свою почту">
+                <button class="btn btn_submit">ПРОДОЛЖИТЬ</button>
+                <p class="body_font">Если после оплаты у Вас возникли вопросы, то обращайтесь в <a href="#" class="a link-anim">TELEGRAM</a></p>
+            </form>
+            <button class="close_modal"><img src="img/close_big.svg" alt=""></button>            
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>  
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>  		
+    <script src="../Js/scriptModal.js"></script>	
 </body>
 </html>
