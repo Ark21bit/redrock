@@ -31,10 +31,16 @@ $(document).ready(function($) {
 
     $( "#accordion" ).accordion({
         collapsible: true,       
-        heightStyle: "content"        
+        heightStyle: "content",    
+		header: '> .accordion-item > .accordion-header'    
     });
     
     $( "#tabs" ).tabs({
-        active: 2
+        active: 1				
     });
+
+	
+	
+
+	
 });
